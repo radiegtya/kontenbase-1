@@ -2,13 +2,6 @@
   <img width="300" src="https://camo.githubusercontent.com/e5871e45b0178db73800a382be64a031c65b195eddecccf95f49d8a7f5f6c481/68747470733a2f2f6b6f6e74656e626173652e636f6d2f5f6e6578742f7374617469632f6d656469612f6b6f6e74656e626173652d6c6f676f2d6c696768742e66616564323864652e737667">
 </p>
  
-<details>
-    <summary>
-        Table of Content
-    </summary>
-
-</details>
-
 # Getting Started
 
 ## Introduction
