@@ -2,101 +2,10 @@
   <img width="300" src="https://camo.githubusercontent.com/e5871e45b0178db73800a382be64a031c65b195eddecccf95f49d8a7f5f6c481/68747470733a2f2f6b6f6e74656e626173652e636f6d2f5f6e6578742f7374617469632f6d656469612f6b6f6e74656e626173652d6c6f676f2d6c696768742e66616564323864652e737667">
 </p>
  
-<a href="https://app.kontenbase.com/"><img alt="App" src="https://img.shields.io/badge/Visit-Kontenbase-orange" /></a>
-
 <details>
     <summary>
         Table of Content
     </summary>
-
-<!-- TOC -->
-
-- [Getting Started](#getting-started)
-    - [Introduction](#introduction)
-    - [Features](#features)
-    - [Quickstart Guide](#quickstart-guide)
-        - [Create Workspace](#create-workspace)
-        - [Create Service](#create-service)
-        - [Customize Fields](#customize-fields)
-        - [Auth](#auth)
-        - [Try Service](#try-service)
-            - [POST](#post)
-            - [GET](#get)
-            - [PATCH](#patch)
-            - [DELETE](#delete)
-- [Overview](#overview)
-    - [Creating Workspace](#creating-workspace)
-    - [Creating Public Service](#creating-public-service)
-    - [Data Modeling](#data-modeling)
-    - [Try Service](#try-service)
-        - [GET](#get)
-        - [POST](#post)
-        - [PATCH](#patch)
-        - [DELETE](#delete)
-    - [Creating Private Service](#creating-private-service)
-    - [Authentication](#authentication)
-        - [Register](#register)
-        - [Login](#login)
-        - [Logout](#logout)
-    - [Authorization](#authorization)
-    - [API KEY](#api-key)
-        - [API KEY Usage](#api-key-usage)
-        - [Generate New API KEY](#generate-new-api-key)
-        - [Delete Workspace](#delete-workspace)
-- [API](#api)
-    - [Basic Service](#basic-service)
-        - [GET](#get)
-            - [Filter](#filter)
-            - [Sort](#sort)
-            - [Limit](#limit)
-        - [POST](#post)
-        - [PATCH](#patch)
-        - [DELETE](#delete)
-    - [Storage  File Upload](#storage--file-upload)
-        - [GET](#get)
-        - [POST](#post)
-        - [PATCH](#patch)
-        - [DELETE](#delete)
-    - [Authentication](#authentication)
-        - [Register](#register)
-        - [Login](#login)
-        - [Logout](#logout)
-- [SDK](#sdk)
-    - [Basic Service](#basic-service)
-        - [Find](#find)
-            - [Filter](#filter)
-            - [Sort](#sort)
-            - [Limit](#limit)
-            - [FindById](#findbyid)
-        - [Create](#create)
-        - [Update](#update)
-        - [Delete](#delete)
-    - [Storage  File Upload](#storage--file-upload)
-        - [Upload](#upload)
-        - [Delete](#delete)
-    - [Authentication](#authentication)
-        - [Register](#register)
-        - [Login](#login)
-        - [Logout](#logout)
-- [Web Socket](#web-socket)
-    - [Setup](#setup)
-    - [Trigger](#trigger)
-    - [Listen](#listen)
-- [Example Projects](#example-projects)
-    - [Todo](#todo)
-        - [Getting Started](#getting-started)
-            - [Kontenbase Back-end Setup](#kontenbase-back-end-setup)
-            - [Front-end Setup](#front-end-setup)
-    - [Blog](#blog)
-        - [Getting Started](#getting-started)
-            - [Kontenbase Back-end Setup](#kontenbase-back-end-setup)
-            - [Front-end Setup](#front-end-setup)
-    - [Chat](#chat)
-        - [Getting Started](#getting-started)
-            - [Kontenbase Back-end Setup](#kontenbase-back-end-setup)
-            - [Front-end Setup](#front-end-setup)
-
-<!-- /TOC -->
 
 </details>
 
@@ -107,11 +16,19 @@
 
 Kontenbase is a Backend as service that easily create backend API, auth, and storage in less than 1 minute without coding.
 
-Kontenbase is focused on enabling developers (especially front-end developers) to build back-end API (currently focuse on REST API) without having to touch backend code at all.
+Think of it as a very simple alternative of:
+- JSON Placeholder
+- Postman
+- Strapi
+- Firebase
+- Supabase
+- and other API-focused tools
+
+Kontenbase is focused on enabling developers (especially front-end developers) to build back-end API (currently focused on REST API) without having to touch backend code at all.
 
 But of course, it's still possible to create a custom backend service too.
 
-## Features
+### Features
 Kontenbase let you focus on the Frontend & Product.
 
 - [x] Hosted Backend
@@ -125,28 +42,28 @@ Kontenbase let you focus on the Frontend & Product.
 - [ ] Internal Tools (coming soon)
 
 ## Quickstart Guide
-This quickstart guide is aimed to help new user to build backend API using Kontenbase. Starting by creating a workspace, creating service with its fields and try the service. To get started, you need to log in with your google account.
+This quickstart guide is aimed to help new User to build backend API using Kontenbase. Starting by creating a workspace, creating service with its fields, try the service. To get started, you need to [log in](app.kontenbase.com) with your google account.
 
 ### Create Workspace
 After logging in, this page will be displayed 
 
 <p align="left">
-  <img width="700" src="https://api.kontenbase.com/upload/file/61d2ad972a43d87ac4519cff/kTxStNJUyifjNcV/1.png">
+  <img width="700" src="workspace">
 </p>
 
 Enter your workspace name then click `Continue` to start creating services.
 
 ### Create Service
-The project has neither data nor services. All you have to do is create your first service. Two buttons are provided to create the first service. Top left  button or center of page button. Any of them is fine.
+The project has neither data nor services. All you have to do is create your first service. Two buttons are provided to create the first service. Top right button or center of page button. Any of them is fine.
 
 <p align="left">
-  <img width="700" src="https://api.kontenbase.com/upload/file/61d2ad972a43d87ac4519cff/rCgjlzRQVdVfSRb/2.png">
+  <img width="700" src="empty service">
 </p>
 
-For this quickstart guide, we will make simple `blogs` application as a **Private Service**.
+For this quickstart guide, we will make simple `todos` application using a **Private Service**.
 
 <p align="left">
-  <img width="700" src="https://api.kontenbase.com/upload/file/61d2ad972a43d87ac4519cff/gkmLoQRlRLyAojO/1.png">
+  <img width="700" src="nama todos">
 </p>
 
 We will talk about the difference between *public* and *private* service later.
@@ -155,36 +72,46 @@ We will talk about the difference between *public* and *private* service later.
 Click the `Customize Fields` button to expand the service details and display two automatic fields. 
 
 <p align="left">
-  <img width="700" src="https://api.kontenbase.com/upload/file/61d2ad972a43d87ac4519cff/csImaqMzqfGuVtH/2.png">
+  <img width="700" src="auto field">
 </p>
 
 When configuring the service, make sure that the field types are properly organized according to your project needs. To edit or delete a field, click the field to see options.
 
+<p align="left">
+  <img width="700" src="edit and delete">
+</p>
+
 Create some fields by clicking `Add New` button.
 
 <p align="left">
-  <img width="700" src="https://api.kontenbase.com/upload/file/61d2ad972a43d87ac4519cff/uCiMOiizHtCnldk/3.png">
+  <img width="700" src="fields">
 </p>
 
 Only 1 minute and you had created your service and its fields, auth, and storage. Let's start to try your service!
 
 ### Auth
-Authentication will check who you are and authorization will check what you can do.
+Authorization section will check who you are and authorization will check what you can do.
 
-- Public
+<p align="left">
+  <img width="700" src="authorization bar">
+</p>
+
+Navigate to the authorization button and yo will know any permissions of each role. Beside, there is also settings and search bar.
+
+- Authenticating as Public
     <p align="left">
-  	<img width="700" src="https://api.kontenbase.com/upload/file/61d2ad972a43d87ac4519cff/grdgTKDtyuLuWHe/3.png">
+  	  <img width="700" src="public">
     </p>
 
 - Authenticated
     <p align="left">
-  	<img width="700" src="https://api.kontenbase.com/upload/file/61d2ad972a43d87ac4519cff/IOcwzWXYXMQsslq/4.png">
+  	  <img width="700" src="authenticated">
     </p>
 
 ### Try Service
 
 <p align="center">
-  <img width="400" src="https://api.kontenbase.com/upload/file/61d2ad972a43d87ac4519cff/cbXdfgIEEPEGcPd/1.png">
+  <img width="400" src="bar API">
 </p>
 
 Each try service displays the API of the service. You may try your service directly on Kontenbase, or copy the API and try the service on any API testing platform.
@@ -192,117 +119,127 @@ Each try service displays the API of the service. You may try your service direc
 Let's begin to try service on Kontenbase!
 
 #### POST
-Expand the service and select `Create Record` to try POST API. Try content entry using the ***simple*** method.
+Expand the service and select `Create Record`. Try content entry using the ***simple*** method.
 
 <p align="left">
-  <img width="700" src="https://api.kontenbase.com/upload/file/61d2ad972a43d87ac4519cff/LYMKPoGnFYxsXmr/1.png">
+  <img width="700" src="unauthorized">
 </p>
 
 Oops, an error response : `Unauthorized` . It looks we should register a user to access the service.
 
 <p align="left">
-  <img width="700" src="https://api.kontenbase.com/upload/file/61d2ad972a43d87ac4519cff/wczqXXbvgweNxSS/2.png">
+  <img width="700" src="register">
 </p>
 
-You get a token but we will pass it for now because we will use *simple* method. Go back to create record.
+You get a token as the response message from register reuqest. But we will pass it for now because we will use *simple* method. Navigate back to create record section.
 
-Don't forget to choose authenticated as bar with the user we recently added.
+Don't forget to choose `authenticated as bar` with the user we recently added.
 <p align="center">
-  <img width="400" src="https://api.kontenbase.com/upload/file/61d2ad972a43d87ac4519cff/SRuhjyNplbrztDT/1.png">
+  <img width="400" src="bar authenticated">
 </p>
 
 Entry record.
 
 <p align="left">
-  <img width="700" src="https://api.kontenbase.com/upload/file/61d2ad972a43d87ac4519cff/heRcChpHvQfghYV/3.png">
+  <img width="700" src="entry record">
 </p>
 
 The detail response :
 
 ````json
-{
-    "_id": "61d3f0a02a43d87ac4519e3b",
-    "content": "Coming soon",
-    "coverImage": [
-        {
-            "fileName": "score.png",
-            "url": "https://api.kontenbase.com/upload/file/61d3ea682a43d87ac4519dfb/GYymOvcgIXtmyjJ/score.png"
-        }
-    ],
-    "createdBy": "61d3f0361836652ed60c8b0c",
-    "date": "2022-01-04",
-    "title": "How to get good score?"
-}
+detail response
 ````
 
-From the response, the detail response let us know that the service also has storage to store the record. That's way the action to upload file is succeed.
+From the response, we know that the service also has storage to store the record. That's way the post request is succeed.
 
-#### GET
-Still on simple method, Find Records by clicking `Send` in Find Records section.
+Let's add more recordies, buddy!
 
-<p align="left">
-  <img width="700" src="https://api.kontenbase.com/upload/file/61d2ad972a43d87ac4519cff/TQKVYCFeWPLmNhR/4.png">
-</p>
+### GET
+Still on simple method GET section, there are some conditions displayed to find records: filter, sort, limit.
 
-Your records are shown in response box, this is the detail records of blogs service.
+  - Filter 
+    <p align="left">
+      <img width="700" src="filter checked : true">
+    </p>
 
-````json
-[
-    {
-        "_id": "61d3f0a02a43d87ac4519e3b",
-        "title": "How to get good score?",
-        "content": "Coming soon",
-        "date": "2021-01-04",
-        "coverImage": [
-            {
-                "fileName": "score.png",
-                "url": "https://api.kontenbase.com/upload/file/61d3ea682a43d87ac4519dfb/GYymOvcgIXtmyjJ/score.png"
-            }
-        ]
-    }
-]
-````
+    Response Message :
 
-#### PATCH
-You need the ID of the records in order to update record. Copy and paste the ID into the box. Then enter your up-to-date record.
+    ````json
+    filter
+    ````
 
-<p align="left">
-  <img width="700" src="https://api.kontenbase.com/upload/file/61d2ad972a43d87ac4519cff/aGOUmxzfIIzNlkD/2.png">
-</p>
+  - Sort
+    <p align="left">
+      <img width="700" src="sort name ascending">
+    </p>
 
-When you navigate back to Find records, current find record detail is below.
+    Response Message :
 
-````json
-[
-    {
-        "_id": "61d3f0a02a43d87ac4519e3b",
-        "title": "History of Java",
-        "content": "Coming soon",
-        "date": "2022-01-04",
-        "coverImage": [
-            {
-                "fileName": "java.png",
-                "url": "https://api.kontenbase.com/upload/file/61d2b3a02a43d87ac4519d2d/QUDGJqxKWYqbhOW/java.png"
-            }
-        ]
-    }
-]
-````
+    ````json
+    sort
+    ````
 
-#### DELETE
-Just like the usual way in your API testing platform. You need the ID of the record to Delete Record.
+  - Limit
+    <p align="left">
+      <img width="700" src="limit 2 skip 1">
+    </p>
+
+    Response Message :
+
+    ````json
+    limit
+    ````
+## Frontend Setup
+We had setup the backend. Next,let's do the frontend part. In fact, you may choose any technologies the frontend part.
+
+In case of consumed Kontenbase API on frontend, We had prepared a frontend using NextJS. Simply clone [here](github.com/kontenbase/kontenbase) and follow the instruction written there.
 
 <p align="left">
-  <img width="700" src="https://api.kontenbase.com/upload/file/61d2ad972a43d87ac4519cff/rQBtjbosOyvFjPA/7.png">
+  <img width="700" src="https://user-images.githubusercontent.com/2161622/147662051-f1311ebe-dc17-429e-b203-ceecaec2c3d5.png">
 </p>
 
-Easy, right?
+Then, let's discuss [Kontenbase SDK](https://www.npmjs.com/package/@kontenbase/sdk) implementation on the frontend.
+
+### Usage
+Configure package with your account's API key obtained from your Kontenbase Dashboard.
+
+/lib/kontenbase.ts
+
+```
+import { KontenbaseClient } from '@kontenbase/sdk'
+
+const kontenbase = new KontenbaseClient({
+  apiKey: process.env.NEXT_PUBLIC_KONTENBASE_API_KEY || '',
+})
+
+```
+
+This will direct you to your Kontenbase API KEY. So, you copy your API KEY from your app.
+
+### Authentication
+Use kontenbase auth services for manage your user.
+
+#### Login
+```
+const { data } = await kontenbase.auth.login({
+  email: 'user@gmail.com',
+  password: 'password',
+})
+```
+
+### Storage
+#### Get
+```
+const { data } = await kontenbase.service('New Service').find()
+```
+
+For more detail explanation, you may visit Kontenbase SDK Documentation.
 
 # Overview
 
 ## Creating Workspace
 <p align="left">
-  <img width="700" src="https://api.kontenbase.com/upload/file/61d2ad972a43d87ac4519cff/kTxStNJUyifjNcV/1.png">
+  <img width="700" src="blank workspace">
 </p>
 
 Upon login, this is the beginning. Create workspace where the project development environment will be happened.
@@ -313,11 +250,11 @@ A service is place to manage and store records based on the field arrangement. T
 In Public Service, users are free to search, create, update, and even delete records without being authenticated.
 
 <p align="left">
-  <img width="700" src="https://api.kontenbase.com/upload/file/61d2ad972a43d87ac4519cff/ofpgWDRdOQJvpiG/3.png">
+  <img width="700" src="create public service belum disave">
 </p>
 
 <p align="left">
-  <img width="700" src="https://api.kontenbase.com/upload/file/61d2ad972a43d87ac4519cff/uTQSGcfgfwsaUKX/7.png">
+  <img width="700" src="exapand public service dgn fields">
 </p>
 
 ## Data Modeling
@@ -326,13 +263,13 @@ Users have freedom to choose the data modeling of each field according to their 
 Both fields ( name and notes ) are default fields that can be edited or deleted. Click the field and you will be shown the options.
 
 <p align="left">
-  <img width="700" src="https://api.kontenbase.com/upload/file/61d2ad972a43d87ac4519cff/GbHndVpzNGrrWvu/1.png">
+  <img width="700" src="edit and delete">
 </p>
 
-Add more fields based on the app needs.
+Add more fields based on the app needs. For example, the blogs app.. 
 
 <p align="left">
-  <img width="700" src="https://api.kontenbase.com/upload/file/61d2ad972a43d87ac4519cff/GMmJePraueBDDrz/9.png">
+  <img width="700" src="fields blogs">
 </p>
 
 |Data Type|Usage |Additional Feature|
@@ -361,51 +298,48 @@ Add more fields based on the app needs.
 ## Try Service
 Each service generated is able to try right away. The basic functions are :
 
+### POST
+Content entry.
+
+<p align="left">
+  <img width="700" src="post blogs">
+</p>
+
+````json
+get
+````
+
 ### GET
 List of records each service.
 
 <p align="left">
-  <img width="700" src="https://api.kontenbase.com/upload/file/61d2ad972a43d87ac4519cff/GKDexQjwGPXqjHA/11.png">
+  <img width="700" src="get blogs">
 </p>
 
 The records are shown on response box, this is the detail record of blogs service.
 
 ````json
-[
-    {
-        "_id": "61d2c3162a43d87ac4519d5e",
-        "title": "Welcome 2022: New Year preparation !",
-        "content": "TBD",
-        "date": "2021-12-31",
-        "coverImage": [
-            {
-                "fileName": "todo.png",
-                "url": "https://api.kontenbase.com/upload/file/61c3cfc52a43d87ac4519085/uOSPAqgOfvSpaQG/todo.png"
-            }
-        ]
-    }
-]
+get
 ````
-
-### POST
-Content entry.
-
-<p align="left">
-  <img width="700" src="https://api.kontenbase.com/upload/file/61d2ad972a43d87ac4519cff/ydEiGCQrhOlhqxG/10.png">
-</p>
 
 ### PATCH
 Update record.
 
 <p align="left">
-  <img width="700" src="https://api.kontenbase.com/upload/file/61d2ad972a43d87ac4519cff/UxlhmrieqbDNhCB/12.png">
+  <img width="700" src="patch ">
 </p>
+
+The records are shown on response box, this is the detail record of blogs service.
+
+````json
+get
+````
 
 ### DELETE
 Delete record.
 
 <p align="left">
-  <img width="700" src="https://api.kontenbase.com/upload/file/61d2ad972a43d87ac4519cff/nzukIrtBXaeEeLK/13.png">
+  <img width="700" src="delete">
 </p>
 
 ## Creating Private Service
@@ -744,42 +678,151 @@ API_Url/logout
 ## Basic Service
 
 ### Find
+```
+const { data } = await kontenbase.service('New Service').find()
+```
 
 #### Filter
+- Equal
+```
+const { data } = await kontenbase.service('New Service').find({ where: { name: 'John'} })
+```
+
+- not equal 
+```
+const { data } = await kontenbase.service('New Service').find({ where: { name: { $ne: 'John' } } })
+```
+
+- contains
+```
+const { data } = await kontenbase.service('New Service').find({ where: { name: { $contains: 'John' } } })
+```
+
+- not contains
+```
+const { data } = await kontenbase.service('New Service').find({ where: { name: { $notContains: 'John' } } })
+```
+
+- include
+```
+const { data } = await kontenbase.service('New Service').find({ where: { name: { $in: ['John'] } } })
+```
+
+- not include
+```
+const { data } = await kontenbase.service('New Service').find({ where: { name: { $nin: ['John'] } } })
+```
+
+- less than
+```
+const { data } = await kontenbase.service('New Service').find({ where: { total: { $lt: 10 } } })
+```
+
+- less than equal
+```
+const { data } = await kontenbase.service('New Service').find({ where: { total: { $lte: 10 } } })
+```
+
+- greater than
+```
+const { data } = await kontenbase.service('New Service').find({ where: { total: { $gt: 10 } } })
+```
+
+- greater than equal
+```
+const { data } = await kontenbase.service('New Service').find({ where: { total: { $gte: 10 } } })
+```
 
 #### Sort
+```
+const { data } = await kontenbase.service('New Service').find({ sort: { name: 1 } })
+```
 
 #### Limit
+```
+const { data } = await kontenbase.service('New Service').find({ limit: 10 })
+```
 
 #### FindById
+```
+const { data } = await kontenbase.service('New Service').getById("605a251d7b8678bf6811k3b1")
+```
 
 ### Create
+```
+const { data } = await kontenbase.service('New Service').create({
+  Name: 'Record',
+  Notes: 'Hello world'
+})
+```
 
 ### Update
+```
+const { data } = await kontenbase.service('New Service').updateById("605a251d7b8678bf6811k3b1", {
+  Name: 'New Record',
+})
+```
 
 ### Delete
+```
+const { data } = await kontenbase.service('New Service').deleteById("605a251d7b8678bf6811k3b1")
+```
 
 ## Storage ( File Upload )
 
 ### Upload
+```
+const file = event.target.files[0]
+const { data } = await kontenbase.storage.upload(file)
+```
 
 ### Delete
 
 ## Authentication
+Use kontenbase auth services for manage your user.
 
 ### Register
+```
+const { data } = await kontenbase.auth.register({
+  firstName: 'John',
+  lastName: 'Doe',
+  email: 'user@gmail.com',
+  password: 'password',
+})
+```
 
 ### Login
+```
+const { data } = await kontenbase.auth.login({
+  email: 'user@gmail.com',
+  password: 'password',
+})
+```
 
 ### Logout
+```
+const { data } = await kontenbase.auth.logout()
+```
 
 # Web Socket
 
 ## Setup
 
 ## Trigger
+```
+kontenbase.realtime.subscribe('New Service', (message) => {
+  console.log(message)
+})
+```
 
 ## Listen
+```
+const key = await kontenbase.realtime.subscribe('New Service', (message) => {
+  console.log(message)
+})
+
+kontenabase.unsubscribe(key)
+```
 
 # Example Projects
 These are some projects we had prepared. Simply clone [the frontend repository](https://github.com/kontenbase/kontenbase.git) for these project.
